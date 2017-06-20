@@ -300,8 +300,10 @@ void p1move()
 void p2move()
 {
     int k,x=1;
+
     printf("\nWHERE YOU WANT TO PLAY P2:");
     scanf("%d",&k);
+    if((k>0&&k<10))
     for(i=0;i<3;i++)
     for(j=0;j<3;j++)
     {
@@ -314,7 +316,12 @@ void p2move()
          }
         }
     }
+    else
+    {printf("INVALID INPUT!");
+        p2move();
+    }
 }
+
 int mainmenu()
 {
     int ch;
